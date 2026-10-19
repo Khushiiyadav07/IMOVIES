@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
 import { useAuth } from '../context/AuthContext';
+import { getPosterUrl } from '../utils/imageUtils';
 
 export default function MovieDetailsPage() {
   const { id } = useParams();
@@ -76,7 +77,7 @@ export default function MovieDetailsPage() {
       <div
         className="position-relative py-5 px-3 px-md-5"
         style={{
-          background: `linear-gradient(to bottom, rgba(14, 19, 31, 0.75) 0%, var(--im-bg-main) 100%), url(${movie.backdrop || movie.poster}) center/cover no-repeat`,
+          background: `linear-gradient(to bottom, rgba(14, 19, 31, 0.75) 0%, var(--im-bg-main) 100%), url(${getPosterUrl(movie.backdrop || movie.poster)}) center/cover no-repeat`,
           minHeight: '400px'
         }}
       >
@@ -85,7 +86,7 @@ export default function MovieDetailsPage() {
             {/* Poster */}
             <div className="col-md-4 col-lg-3 text-center text-md-start">
               <img
-                src={movie.poster}
+                src={getPosterUrl(movie.poster)}
                 alt={movie.title}
                 className="img-fluid rounded-4 shadow-lg border"
                 style={{ maxHeight: '380px', borderColor: 'var(--im-border-color)' }}

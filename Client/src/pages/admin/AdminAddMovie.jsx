@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMovies } from '../../context/MovieContext';
+import { getPosterUrl } from '../../utils/imageUtils';
 
 export default function AdminAddMovie() {
   const navigate = useNavigate();
@@ -59,7 +60,7 @@ export default function AdminAddMovie() {
           title="Click to set Poster Image URL"
         >
           {posterUrl ? (
-            <img src={posterUrl} alt="Poster preview" />
+            <img src={getPosterUrl(posterUrl)} alt="Poster preview" />
           ) : (
             <div className="p-3">
               <i className="bi bi-plus-circle text-danger fs-1 d-block mb-2"></i>

@@ -45,7 +45,7 @@ const seedDatabase = async () => {
       {
         title: "Rrr",
         description: "A fearless warrior on a perilous mission comes face to face with a steely cop serving British forces in pre-independent India.",
-        poster: `${import.meta.env.BASE_URL}images/rrr_poster.jpg`,
+        poster: "/images/rrr_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/8hLp8oTfXJqHjE76aXy7JpY7hZk.jpg",
         genres: "Action, Drama, Historical",
         runtime: "182 min",
@@ -57,7 +57,7 @@ const seedDatabase = async () => {
       {
         title: "Baahubali 2: the conclusion",
         description: "When Shiva, the son of Bahubali, learns about his heritage, he begins to look for answers. His story is juxtaposed with past events that unfolded in the Mahishmati Kingdom.",
-         poster: `${import.meta.env.BASE_URL}images/Bahubali-2_poster.jpg`,
+        poster: "/images/Bahubali-2_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/m99FmQYy3h8tS0M0JqZ3D7t9b5F.jpg",
         genres: "Action, Fantasy, Historical",
         runtime: "167 min",
@@ -69,7 +69,7 @@ const seedDatabase = async () => {
       {
         title: "Og",
         description: "A ruthless gangster named Ojas Gambheera returns to Mumbai after a decade of disappearance to settle scores with rival mafia bosses.",
-        poster: `${import.meta.env.BASE_URL}images/OG_poster.jpg`,
+        poster: "/images/OG_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/7c9JuqZ68aZ0p2r5x9s6Y5m8n1.jpg",
         genres: "Action, Crime, Thriller",
         runtime: "160 min",
@@ -81,7 +81,7 @@ const seedDatabase = async () => {
       {
         title: "Rajasabb",
         description: "A romantic horror comedy following a man who inherits a mysterious ancestral royal estate, only to discover paranormal secrets.",
-        poster: `${import.meta.env.BASE_URL}images/Rajasaab_poster.jpg`,
+        poster: "/images/Rajasaab_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/r0hZz4B3N0qK3X8l1P0m7Q5b1.jpg",
         genres: "Comedy, Horror, Romance",
         runtime: "155 min",
@@ -93,7 +93,7 @@ const seedDatabase = async () => {
       {
         title: "Toxic",
         description: "A fairy tale for grown-ups set in the dark criminal underworld with intense action sequences and high-stakes drama.",
-        poster: `${import.meta.env.BASE_URL}images/toxic_poster.png`,
+        poster: "/images/toxic_poster.png",
         backdrop: "https://image.tmdb.org/t/p/original/9r1B3k8q5x2m0o7p4y6n1t2.jpg",
         genres: "Action, Thriller",
         runtime: "150 min",
@@ -117,7 +117,7 @@ const seedDatabase = async () => {
       {
         title: "Bagheera",
         description: "When morality is threatened, a masked vigilante rises to protect the helpless and deliver relentless justice to criminals.",
-        poster: `${import.meta.env.BASE_URL}images/Bagheera_poster.jpg`,
+        poster: "/images/Bagheera_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/c2l0m8n1o2p3q4r5s6t7u8v9w0.jpg",
         genres: "Action, Crime, Drama",
         runtime: "158 min",
@@ -129,7 +129,7 @@ const seedDatabase = async () => {
       {
         title: "The pride of bharat",
         description: "An epic biographical saga chronicling the valiant leadership, guerrilla warfare tactics, and founding of the Maratha Empire.",
-        poster: `${import.meta.env.BASE_URL}images/The-pride-of-bharat_poster.jpg`,
+        poster: "/images/The-pride-of-bharat_poster.jpg",
         backdrop: "https://image.tmdb.org/t/p/original/p1q2r3s4t5u6v7w8x9y0z1a2.jpg",
         genres: "Historical, Action, Drama",
         runtime: "165 min",

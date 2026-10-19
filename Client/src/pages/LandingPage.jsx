@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { getPosterUrl } from '../utils/imageUtils';
 
 export default function LandingPage() {
   const { user } = useAuth();
@@ -53,10 +54,14 @@ export default function LandingPage() {
           />
           <div className="p-4" style={{ transform: 'rotate(-4deg)' }}>
             <img
-              src="https://image.tmdb.org/t/p/w500/wE0noIQUSNaqqaG014902bB8fl8.jpg"
+              src={getPosterUrl('/images/rrr_poster.jpg')}
               alt="iMovies Spotlight"
               className="img-fluid rounded-4 shadow-lg border"
               style={{ maxHeight: '440px', borderColor: 'rgba(229, 9, 20, 0.3)' }}
+              onError={(e) => {
+                e.target.onerror = null;
+                e.target.src = "https://image.tmdb.org/t/p/w500/wE0noIQUSNaqqaG014902bB8fl8.jpg";
+              }}
             />
           </div>
         </div>

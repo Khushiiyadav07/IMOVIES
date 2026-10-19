@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
+import { getPosterUrl } from '../utils/imageUtils';
 
 export default function MovieCard({ movie }) {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ export default function MovieCard({ movie }) {
     <div className="movie-card cursor-pointer" onClick={handleCardClick} role="button">
       <div className="movie-poster-wrap">
         <img
-          src={movie.poster}
+          src={getPosterUrl(movie.poster)}
           alt={movie.title}
           loading="lazy"
           onError={(e) => {

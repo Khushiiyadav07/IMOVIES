@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
 import { useAuth } from '../context/AuthContext';
+import { getPosterUrl } from '../utils/imageUtils';
 
 export default function BookingsPage() {
   const { bookings, cancelBooking } = useMovies();
@@ -44,7 +45,7 @@ export default function BookingsPage() {
                 {/* Poster on left */}
                 <div className="booking-ticket-poster">
                   <img
-                    src={b.moviePoster || 'https://image.tmdb.org/t/p/w500/wE0noIQUSNaqqaG014902bB8fl8.jpg'}
+                    src={getPosterUrl(b.moviePoster) || 'https://image.tmdb.org/t/p/w500/wE0noIQUSNaqqaG014902bB8fl8.jpg'}
                     alt={b.movieTitle}
                     onError={(e) => {
                       e.target.onerror = null;

@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
 import { useMovies } from '../context/MovieContext';
 import { useAuth } from '../context/AuthContext';
+import { getPosterUrl } from '../utils/imageUtils';
 
 export default function SeatSelectionPage() {
   const { showId } = useParams();
@@ -214,7 +215,7 @@ export default function SeatSelectionPage() {
 
             <div className="d-flex gap-3 mb-3">
               <img
-                src={movie.poster}
+                src={getPosterUrl(movie.poster)}
                 alt={movie.title}
                 className="rounded"
                 style={{ width: '60px', height: '85px', objectFit: 'cover' }}
